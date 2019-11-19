@@ -3,7 +3,7 @@ pipeline{
 	stages{
 	stage('reading yml'){
 	steps{
-	  datas = readYml file: 'pipeline.yml'
+		sript { datas = readYml file: ('pipeline.yml')}
 	  echo "my name is ${datas.pipeline.anme}"
 
 	}
