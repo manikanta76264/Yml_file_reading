@@ -2,7 +2,7 @@ pipeline{
 	
 	agent any
 	environment {
-		def datas = readYml file: 'pipeline.yml'
+		def datas = readYaml file: 'pipeline.yml'
 	}
 	stages{
 	stage('reading yml'){
