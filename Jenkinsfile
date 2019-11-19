@@ -3,8 +3,8 @@ pipeline{
 	stages{
 	stage('reading yml'){
 	steps{
-		script { datas = readYml file: ('pipeline.yml')}
-	  echo "my name is ${datas.pipeline.anme}"
+	def datas = readYml file: 'pipeline.yml'
+	  echo "my name is ${datas.pipeline.name}"
 
 	}
 	}
